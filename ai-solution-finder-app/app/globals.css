@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Global styles
+ *
+ * We define several custom classes to mirror the bold outlines and drop shadows used
+ * throughout the reference design. These classes can be composed alongside Tailwind
+ * utility classes. Should you need additional utility classes feel free to add
+ * them here.
+ */
+@layer components {
+  .card {
+    @apply bg-white border-brand-border border-thick rounded-lg shadow-card px-6 py-4;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2 font-medium rounded-md text-white bg-brand-primary border-brand-border border-thick shadow-card transition-colors disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 font-medium rounded-md text-brand-border bg-brand-accent border-brand-border border-thick shadow-card transition-colors disabled:opacity-50;
+  }
+  .btn-tertiary {
+    @apply inline-flex items-center justify-center px-4 py-2 font-medium rounded-md text-brand-border bg-white border-brand-border border-thick shadow-card transition-colors disabled:opacity-50;
+  }
+}
